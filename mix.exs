@@ -20,7 +20,8 @@ defmodule Depcache.Mixfile do
 
   defp deps do
     [
-      {:depcache, git: "https://github.com/zotonic/depcache.git", tag: "1.2.0"}
+      {:depcache, git: "https://github.com/zotonic/depcache.git", tag: "1.2.0"},
+      {:ex_doc, "~> 0.11.4", only: [:dev]}
     ]
   end
 

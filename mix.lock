@@ -1,1 +1,2 @@
-%{"depcache": {:git, "https://github.com/zotonic/depcache.git", "d4918add965d610ce2b10cb6c10fcd36211506b6", [tag: "1.2.0"]}}
+%{"depcache": {:git, "https://github.com/zotonic/depcache.git", "d4918add965d610ce2b10cb6c10fcd36211506b6", [tag: "1.2.0"]},
+  "ex_doc": {:hex, :ex_doc, "0.11.4"}}
