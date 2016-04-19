@@ -1,5 +1,7 @@
 # XepCache
 
+[![Build Status](https://travis-ci.org/arjan/xepcache.svg?branch=master)](https://travis-ci.org/arjan/xepcache)
+
 A wrapper around Erlang's
 [depcache](https://github.com/zotonic/depcache), an in-memory caching
 server based on ETS.
