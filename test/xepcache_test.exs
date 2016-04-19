@@ -45,5 +45,24 @@ defmodule XepCacheTest do
     XepCache.flush :parent
     assert nil == XepCache.get :child
   end
-  
+
+  test "memo with anon function" do
+    time_fn = fn() -> System.system_time end
+    t = XepCache.memo(time_fn, :time_key)
+    assert t == XepCache.memo(time_fn, :time_key)
+    assert t == XepCache.memo(time_fn, :time_key)
+  end
+
+  # test "memo with MFA" do
+  #   time_fn = {XepCacheTest, :some_function, []}
+  #   t = XepCache.memo(time_fn)
+  #   assert t == XepCache.memo(time_fn)
+  #   assert t == XepCache.memo(time_fn)
+  # end
+
+
+  def some_function do
+    System.system_time
+  end
+
 end

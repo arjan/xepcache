@@ -64,7 +64,7 @@ defmodule XepCache do
   """
   def memo(fun), do: memo(fun, nil, server: @default)
   def memo(fun, key), do: memo(fun, key, server: @default)
-  def memo(fun, key, opts) when is_function(fun) do
+  def memo(fun, key, opts) do
     :depcache.memo(fun, param(key || opts[:key]), ttl(opts), deps(opts), server(opts))
   end
   
