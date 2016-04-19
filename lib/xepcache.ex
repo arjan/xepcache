@@ -1,4 +1,4 @@
-defmodule ExCache do
+defmodule XepCache do
   use Application
 
   @default :depcache
@@ -10,7 +10,7 @@ defmodule ExCache do
       worker(:depcache, [@default, [memory_max: 512]])
     ]
 
-    opts = [strategy: :one_for_one, name: ExCache.Supervisor]
+    opts = [strategy: :one_for_one, name: XepCache.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
